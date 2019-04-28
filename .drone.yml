@@ -5,5 +5,5 @@ steps:
   - name: frontend
     image: alpine
     commands:
-      - docker ps 
+      - ls 
 
