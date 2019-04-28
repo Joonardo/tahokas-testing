@@ -3,14 +3,20 @@ name: tahokas-testing
 
 steps:
   - name: tester
-    image: docker 
+    image: alpine 
     commands:
-      - docker ps
+      - echo moi > ./asd/test
     volumes:
-      - name: docker-socket
-        path: /var/run/docker.sock
+      - name: asd
+        path: ./asd
+  - name: tester2
+    image: alpine
+    commands:
+      - cat ./asd/test
+    volumes:
+      - name: asd
+        path: ./asd
 
 volumes:
-  - name: docker-socket
-    host:
-      path: /var/run/docker.sock
+  - name: asd
+    temp: {}
