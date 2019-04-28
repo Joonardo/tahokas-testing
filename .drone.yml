@@ -18,6 +18,10 @@ steps:
       - name: asd
         path: /asd
 
+services:
+  - name: server
+    image: nginx:alpine
+
 volumes:
   - name: asd
     temp: {}
