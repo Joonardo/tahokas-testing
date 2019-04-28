@@ -6,6 +6,7 @@ steps:
     image: alpine 
     commands:
       - echo moi > /asd/test
+      - pwd
     volumes:
       - name: asd
         path: /asd
