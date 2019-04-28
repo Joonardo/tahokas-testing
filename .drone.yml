@@ -1,0 +1,8 @@
+kind: pipeline
+name: fk-kulu
+
+steps:
+  - name: frontend
+    commands:
+      - docker logs webserver
+
