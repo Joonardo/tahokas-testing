@@ -3,10 +3,12 @@ name: tahokas-testing
 
 steps:
   - name: tester
-    image: alpine 
+    image: alpine
+    privileged: true
     commands:
       - echo moi > /asd/test
       - pwd
+      - docker ps
     volumes:
       - name: asd
         path: /asd
