@@ -3,7 +3,7 @@ name: tahokas-testing
 
 steps:
   - name: tester
-    image: alpine
+    image: docker
     privileged: true
     commands:
       - echo moi > /asd/test
