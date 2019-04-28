@@ -10,6 +10,8 @@ steps:
       - pwd
       - docker ps
     volumes:
+      - name: sock
+        path: /var/run/docker.sock
       - name: asd
         path: /asd
   - name: tester2
@@ -27,3 +29,6 @@ services:
 volumes:
   - name: asd
     temp: {}
+  - name: sock
+    host:
+      path: /var/run/docker.sock
