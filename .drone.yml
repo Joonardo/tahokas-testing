@@ -1,8 +1,9 @@
 kind: pipeline
-name: fk-kulu
+name: tahokas-testing 
 
 steps:
   - name: frontend
+    image: alpine
     commands:
-      - docker logs webserver
+      - docker ps 
 
