@@ -3,7 +3,9 @@ name: tahokas-testing
 
 steps:
   - name: frontend
-    image: alpine
+    image: docker 
     commands:
-      - docker ps 
+      - docker ps
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
