@@ -5,17 +5,17 @@ steps:
   - name: tester
     image: alpine 
     commands:
-      - echo moi > ./asd/test
+      - echo moi > /asd/test
     volumes:
       - name: asd
-        path: ./asd
+        path: /asd
   - name: tester2
     image: alpine
     commands:
-      - cat ./asd/test
+      - cat /asd/test
     volumes:
       - name: asd
-        path: ./asd
+        path: /asd
 
 volumes:
   - name: asd
